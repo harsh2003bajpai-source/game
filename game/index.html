@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hug Quest</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+
+
+  <body>
+
+  <div class="container">
+
+    <!-- Splash Screen -->
+    <div id="splash" class="screen active">
+      <h1 class="title">A game made for someone special...</h1>
+      <p class="subtitle">Tap to continue</p>
+      <button onclick="goToName()" class="btn">Start</button>
+    </div>
+
+    <!-- Name Screen -->
+    <div id="nameScreen" class="screen">
+      <h2>Who is playing?</h2>
+      <input id="username" type="text" placeholder="Enter your name"/>
+      <button onclick="goToRules()" class="btn">Continue</button>
+    </div>
+
+    <!-- Rules Screen -->
+    <div id="rulesScreen" class="screen">
+      <h2>📜 Game Rules</h2>
+
+      <div class="rules">
+        <p>1. This is a fun memory game 🎮</p>
+        <p>2. Answer honestly 😄</p>
+        <p>3. No cheating 🙃</p>
+        <p>4. Just enjoy the journey 💖</p>
+        <p>5. Final reward is a surprise 🎁</p>
+      </div>
+
+      <button onclick="startQuiz()" class="btn">I Understand</button>
+    </div>
+
+  </div>
+  <!-- QUIZ SCREEN -->
+<div id="quizScreen" class="screen">
+
+  <h2 id="questionText">Question</h2>
+
+  <div id="options" class="options"></div>
+
+  <p id="progress"></p>
+
+</div>
+
+<!-- RESULT SCREEN -->
+<div id="resultScreen" class="screen">
+  <h2>🎉 Game Complete</h2>
+  <p id="resultText"></p>
+</div>
+
+<!-- HUG SCREEN -->
+<div id="giftScreen" class="screen">
+
+  <div class="hug-emoji">🤗</div>
+
+
+
+  <h2 class="hug-title">Congratulations ! you won a Hug from Arpan 🤗</h2>
+
+  <p class="final-message">
+    You are really important to me.<br>
+  </p>
+
+  <button class="btn" onclick="restartGame()">
+    Play Again
+  </button>
+
+</div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
